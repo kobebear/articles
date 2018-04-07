@@ -9,6 +9,7 @@
     <OldToolsVersion>15.0</OldToolsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="AfominDotCom.AspNetCore.AngularCLI" Version="1.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
   </ItemGroup>
   <ItemGroup>
@@ -17,6 +18,27 @@
   <ItemGroup>
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
     <Content Remove="ClientApp\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientApp\app\components\articles\images\favicon-32x32.png" />
+    <Content Include="ClientApp\app\components\articles\images\favicon.ico" />
+    <Content Include="ClientApp\app\components\articles\images\ng-book-2-minibook.png" />
+    <Content Include="ClientApp\app\components\articles\vendor\semantic.min.css" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.eot" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.otf" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.svg" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.woff" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\fonts\icons.woff2" />
+    <Content Include="ClientApp\app\components\articles\vendor\themes\default\assets\images\flags.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>System</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\components\articles\article.model.ts" />
   </ItemGroup>
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
